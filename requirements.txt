@@ -1,0 +1,3 @@
+asgiref @ file:///C:/Users/dev-admin/buildout/croot/asgiref_1761959966469/work
+Django @ file:///C:/miniconda3/conda-bld/django_1764329311638/work
+sqlparse @ file:///C:/miniconda3/conda-bld/sqlparse_1764240087577/work
