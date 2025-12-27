@@ -1,7 +1,8 @@
-from datetime import date, timedelta
+from datetime import timedelta
 
 from django.test import TestCase
 from django.urls import reverse
+from django.utils import timezone
 
 from .forms import PacienteForm
 from .models import Paciente
@@ -76,7 +77,7 @@ class PacienteFormValidationsTests(TestCase):
 
     def test_error_fecha_nacimiento_futura(self):
         data = self._valid_payload()
-        data['fecha_nacimiento'] = (date.today() + timedelta(days=1)).isoformat()
+        data['fecha_nacimiento'] = (timezone.localdate() + timedelta(days=1)).isoformat()
 
         form = PacienteForm(data=data)
 
